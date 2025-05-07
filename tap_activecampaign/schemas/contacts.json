@@ -12,10 +12,10 @@
     "phone": {
       "type": ["null", "string"]
     },
-    "first_name": {
+    "firstName": {
       "type": ["null", "string"]
     },
-    "last_name": {
+    "lastName": {
       "type": ["null", "string"]
     },
     "orgid": {
@@ -76,7 +76,7 @@
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "score_values": {
+    "scoreValues": {
       "anyOf": [
         {
           "type": "null"
@@ -89,7 +89,7 @@
         }
       ]
     },
-    "account_contacts": {
+    "accountContacts": {
       "anyOf": [
         {
           "type": "null"
@@ -101,6 +101,9 @@
           }
         }
       ]
+    },
+    "links": {
+      "type": ["null", "object"]
     },
     "id": {
       "type": ["null", "integer"]
