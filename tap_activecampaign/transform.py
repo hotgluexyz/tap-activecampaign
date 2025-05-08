@@ -21,9 +21,15 @@ def fix_records(this_json):
 
 def transform_json(this_json, stream_name, data_key):
     if data_key in this_json:
-        converted_json = humps.decamelize(this_json[data_key])
+        if stream_name  =='contacts':
+            converted_json = this_json[data_key]
+        else:
+            converted_json = humps.decamelize(this_json[data_key])
     else:
-        converted_json = humps.decamelize(this_json)
+        if stream_name  =='contacts':
+            converted_json = this_json
+        else:
+            converted_json = humps.decamelize(this_json)
     
     fix_records(converted_json)
 
